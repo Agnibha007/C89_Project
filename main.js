@@ -28,15 +28,7 @@ function my_mousemove(e) {
         ctx.strokeStyle = color;
         ctx.lineWidth = width_of_line;
 
-        /*
-        Add the function moveTo() with coordinates
-        last_position_of_x, last_position_of_y
-        to start creation of line
-        
-        Add the function lineTo() with coordinates
-        current_position_of_mouse_x, current_position_of_mouse_y
-        to end creation of line
-        */
+
         ctx.moveTo(last_position_of_x, last_position_of_y);
         ctx.lineTo(current_position_of_mouse_x, current_position_of_mouse_y);
 
@@ -62,15 +54,6 @@ function my_mouseleave(e) {
 
 var last_position_of_touch_x, last_position_of_touch_y;
 
-/*
-Assign screen.width to variable width
-
-Decrease 70 from screen.width
-and assign it to new_width
-
-Decrease 300 from screen.height
-and assign it to new_height
-*/
 
 var width = screen.width;
 var height = screen.height;
@@ -115,7 +98,7 @@ function my_touchmove(e) {
         to end creation of line    
     */
     ctx.moveTo(last_position_of_x, last_position_of_y);
-    ctx.lineTo(current_position_of_mouse_x, current_position_of_y);
+    ctx.lineTo(current_position_of_touch_x, current_position_of_touch_y);
 
     ctx.stroke();
 
